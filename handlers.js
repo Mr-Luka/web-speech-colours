@@ -1,4 +1,4 @@
-import {isValidColor} from "./colors.js";
+import {colors, isValidColor} from "./colors.js";
 
 function logWords(results) {
     console.log(results[results.length - 1][0].transcript)
@@ -15,6 +15,7 @@ export function handleResult({results}){
     if(!isValidColor(color)) return // thats all folks
     // if it is, then show the UI for that
     const colorSpan = document.querySelector(`.${color}`);
+    colorSpan.classList.add("got")
     console.log(colorSpan)
     console.log("This is a valid color");
     console.log(color)
