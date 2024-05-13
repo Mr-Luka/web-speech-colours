@@ -20,6 +20,26 @@ button {
   border-radius: 50%;
   box-shadow: 20px 55px 105px rgb(0, 0, 0);
 }
+button:hover {
+  animation: animated 5.0s;
+}
+@keyframes animated{
+    0%{
+        transform: rotate(0deg) translateX(0px);
+    }
+    25%{
+        transform: rotate(360deg) translateX(260px);
+    }
+    50%{
+        transform: rotate(0deg) translateX(0px);
+    }
+    75%{
+        transform: rotate(360deg) translateX(260px);
+    }
+    100%{
+        transform: rotate(0deg) translateX(0px);
+    }
+} 
 
 h1 {
   font-size: 10rem;

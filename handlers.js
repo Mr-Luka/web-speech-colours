@@ -24,7 +24,7 @@ export function handleResult({results}){
 
 }
 
-function handlePoints () {
+export function handlePoints () {
     let points = 0;
     points +1;
     const spanPoint = document.querySelector("span.point");

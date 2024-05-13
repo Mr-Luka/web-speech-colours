@@ -36,7 +36,6 @@ function start() {
 
 button.addEventListener("click", ()=>{
     button.classList.add("nope");
+    colorsEl.innerHTML = displayColors(colorsByLength);
     start();
-    
 })
-colorsEl.innerHTML = displayColors(colorsByLength);
