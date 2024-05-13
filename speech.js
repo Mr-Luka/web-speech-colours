@@ -1,7 +1,10 @@
 import { handleResult } from "./handlers.js";
 import {colorsByLength, isDark} from "./colors.js";
 
+
+const button = document.querySelector("button");
 const colorsEl = document.querySelector(".colors");
+
 function displayColors(colors) {
     return colors.map(color=>
      `<span class="color ${color} ${isDark(color) ? 'dark' : ''}" 
@@ -26,6 +29,7 @@ function start() {
     recognition.interimResults = true; // Givr us results as we are speaking
     recognition.onresult = handleResult;
     recognition.start();
+    
 
 }
 

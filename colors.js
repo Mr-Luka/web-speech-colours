@@ -165,4 +165,5 @@ console.log(colorsByLength)
 
 export function isValidColor (word) {
   return !!colors[word];
+  
 }
