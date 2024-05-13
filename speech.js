@@ -13,7 +13,7 @@ function start() {
     const recognition = new SpeechRecognition();
     recognition.continous = true;   // This is weather or not it should continually look for
                                     // speach recognition or stop itself after it has recognized
-    recognition.intermResults = true; // Givr us results as we are speaking
+    recognition.interimResults = true; // Givr us results as we are speaking
     recognition.onresult = handleResult;
     recognition.start();
 
