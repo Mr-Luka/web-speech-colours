@@ -1,3 +1,5 @@
+import { handleResult } from "./handlers.js";
+
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 function start() {
     // See if their browser supports this
@@ -8,6 +10,12 @@ function start() {
     // it does work
     console.log("starting")
     // make a new speech reco
+    const recognition = new SpeechRecognition();
+    recognition.continous = true;   // This is weather or not it should continually look for
+                                    // speach recognition or stop itself after it has recognized
+    recognition.intermResults = true; // Givr us results as we are speaking
+    recognition.onresult = handleResult;
+    recognition.start();
 
 }
 
