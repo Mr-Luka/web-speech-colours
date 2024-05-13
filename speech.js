@@ -4,7 +4,7 @@ import {colorsByLength, isDark} from "./colors.js";
 const colorsEl = document.querySelector(".colors");
 function displayColors(colors) {
     return colors.map(color=>
-     `<span class="color ${isDark(color) ? 'dark' : ''}" 
+     `<span class="color ${color} ${isDark(color) ? 'dark' : ''}" 
      style="background: ${color}">
      ${color}</span>`)
      .join("");

@@ -162,3 +162,7 @@ export const colorsByLength = Object.keys(colors).sort((a,b)=>{
   return a.length - b.length;
 });
 console.log(colorsByLength)
+
+export function isValidColor (word) {
+  return !!colors[word];
+}
