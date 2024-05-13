@@ -26,14 +26,16 @@ function start() {
     const recognition = new SpeechRecognition();
     recognition.continous = true;   // This is weather or not it should continually look for
                                     // speach recognition or stop itself after it has recognized
-    recognition.interimResults = true; // Givr us results as we are speaking
+    recognition.interimResults = true; // Give us results as we are speaking
     recognition.onresult = handleResult;
     recognition.start();
+
     
 
 }
 
 button.addEventListener("click", ()=>{
+    button.classList.add("nope");
     start();
     
 })
