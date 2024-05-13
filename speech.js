@@ -33,5 +33,8 @@ function start() {
 
 }
 
-start();
+button.addEventListener("click", ()=>{
+    start();
+    
+})
 colorsEl.innerHTML = displayColors(colorsByLength);
