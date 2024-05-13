@@ -20,13 +20,16 @@ export function handleResult({results}){
     // console.log("This is a valid color");
     // console.log(color)
     // change background color
-    document.body.style.backgroundColor = color;
+    if (isValidColor(color)){
+        handlePoints()
+    }
 
 }
 
+let points = 0;
+
 export function handlePoints () {
-    let points = 0;
-    points +1;
+    points ++;
     const spanPoint = document.querySelector("span.point");
     spanPoint.textContent = points;
 }

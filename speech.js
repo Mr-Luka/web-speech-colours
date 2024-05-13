@@ -1,4 +1,4 @@
-import { handleResult } from "./handlers.js";
+import { handleResult, handlePoints } from "./handlers.js";
 import {colorsByLength, isDark} from "./colors.js";
 
 
@@ -29,9 +29,6 @@ function start() {
     recognition.interimResults = true; // Give us results as we are speaking
     recognition.onresult = handleResult;
     recognition.start();
-
-    
-
 }
 
 button.addEventListener("click", ()=>{
