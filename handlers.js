@@ -19,5 +19,7 @@ export function handleResult({results}){
     console.log(colorSpan)
     console.log("This is a valid color");
     console.log(color)
+    // change background color
+    document.body.style.backgroundColor = color;
 
 }
